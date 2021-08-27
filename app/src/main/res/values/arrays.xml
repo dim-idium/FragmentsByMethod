@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cities">
-        <item>Москва</item>
-        <item>Санкт-Петербург</item>
-        <item>Екатеринбург</item>
-        <item>Новосибирск</item>
-        <item>Самара</item>
+        <item>Уфа</item>
+        <item>Мелеуз</item>
+        <item>Салават</item>
+        <item>Стерлитамак</item>
+        <item>Ишимбай</item>
     </string-array>
+
+
+<integer-array name="coat_of_arms_imgs">
+        <item>@drawable/ufa</item><!-- герб Москвы -->
+        <item>@drawable/meleuz</item><!-- герб Санкт-Петербурга -->
+        <item>@drawable/salavt</item><!-- герб Екатеринбурга -->
+        <item>@drawable/sterlitamak</item><!-- герб Новосибирска -->
+        <item>@drawable/ishimbay</item><!-- герб Самары -->
+</integer-array>
 </resources>
