@@ -4,6 +4,8 @@ package com.dimidium.fragmentsbymethod;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
@@ -39,14 +41,14 @@ public class CoatOfArmsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Таким способом можно получить головной элемент из макета
-        View view = inflater.inflate(R.layout.fragment_coat_of_arms, container, false);
-        // найти в контейнере элемент-изображение
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_coat_of_arms, container, false);
+    }
+
+    public void  onViewCreated(@NonNull View view, @Nullable Bundle saveInstanceState){
+        super.onViewCreated(view, saveInstanceState);
         AppCompatImageView imageCoatOfArms = view.findViewById(R.id.coat_of_arms);
-        // Получить из ресурсов массив указателей на изображения гербов
         TypedArray images = getResources().obtainTypedArray(R.array.coat_of_arms_imgs);
-        // Выбрать по индексу подходящий
-        imageCoatOfArms.setImageResource(images.getResourceId(index, -1));
-        return view;
+        imageCoatOfArms.setImageResource(images.getResourceId(index,-1));
     }
 }
